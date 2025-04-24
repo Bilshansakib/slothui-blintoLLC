@@ -1,0 +1,480 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: linear-gradient(180deg, #f0f0ff 0%, #e6e6fa 100%);
+    min-height: 100vh;
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    background: linear-gradient(to bottom, #f0f0ff 50%, #5252eb 100%);
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-icon {
+    width: 32px;
+    height: 32px;
+    background-color: #6c5ce7;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 8px;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 20px;
+    color: #333;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.btn {
+    padding: 10px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-outline {
+    border: 1px solid #ddd;
+    background: white;
+    color: #333;
+}
+
+.btn-primary {
+    background-color: #584CF4;
+    color: white;
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 40px 0;
+    margin-bottom: 40px;
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(88, 76, 244, 0.1);
+    color: #584CF4;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.store-buttons img {
+    height: 50px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+
+
+/* App showcase */
+.app-showcase {
+    position: relative;
+    margin: 0 auto;
+    max-width: 900px;
+    padding-bottom: 60px;
+}
+
+.dashboard-preview {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+    width: 100%;
+}
+
+.mobile-preview {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    width: 240px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.dashboard-chart {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 15px;
+    height: 200px;
+}
+
+.dashboard-table {
+    background: #f9f9f9;
+    border-radius: 12px;
+    padding: 15px;
+    height: 200px;
+}
+
+.sidebar {
+    width: 220px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-menu li.active {
+    background: rgba(88, 76, 244, 0.1);
+    color: #584CF4;
+}
+
+.sidebar-menu li i {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+    background: #ddd;
+    border-radius: 4px;
+}
+
+/* Mobile styles */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        padding: 0 16px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .auth-buttons {
+        display: none;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+    .app-showcase {
+        transform: scale(0.8);
+        max-width: 100%;
+    }
+
+    .mobile-preview {
+        position: static;
+        margin: 20px auto 0;
+        width: 80%;
+        max-width: 280px;
+    }
+
+    .download-buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* social proof section --------------- */
+
+.social-proof {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #f1f1f1;
+}
+
+.social-proof {
+    width: 100%;
+}
+
+.social-proof-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 500;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+    align-items: center;
+    justify-items: center;
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 65px;
+    padding: 10px;
+    transition: transform 0.3s ease;
+}
+
+.logo-item:hover {
+    transform: scale(1.05);
+}
+
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Logos in second row */
+.logo-item:nth-child(n+7) {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .logo-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+    
+    .logo-item {
+        height: 50px;
+    }
+    
+    .social-proof-title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .logo-item {
+        height: 40px;
+    }
+    
+    .social-proof {
+        padding: 30px 15px;
+    }
+}
+
+/* features section */
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    background: white;
+}
+
+/* Feature section styles -------------*/
+.features-section {
+    text-align: center;
+}
+
+.feature-subtitle {
+    color: #6052FF;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.feature-title {
+    color: #1E1E37;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.feature-description {
+    color: #6B7280;
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    line-height: 1.7;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.feature-icon {
+    height: 64px;
+    width: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.feature-icon svg {
+    height: 38px;
+    width: 38px;
+    stroke: #6052FF;
+    fill: none;
+}
+
+.feature-item-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #1E1E37;
+}
+
+.feature-item-description {
+    font-size: 16px;
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 50px 20px;
+    }
+    
+    .feature-title {
+        font-size: 28px;
+    }
+    
+    .feature-description {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 640px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .feature-subtitle {
+        font-size: 14px;
+    }
+    
+    .feature-title {
+        font-size: 24px;
+    }
+    
+    .feature-item-title {
+        font-size: 18px;
+    }
+    
+    .feature-icon {
+        height: 50px;
+        width: 50px;
+    }
+}
