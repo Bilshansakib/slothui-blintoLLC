@@ -369,17 +369,26 @@ header {
 }
 
 .feature-subtitle {
-  color: #6052ff;
-  font-size: 16px;
-  font-weight: 500;
+  background-color: #eef2ff;
+  color: #5046e5;
+  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 16px;
+  max-height: 32px;
+  max-width: 145px;
+  padding: 6px 12px;
+  gap: 8px;
+  border-radius: 1234px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;  
 }
 
 .feature-title {
   color: #1e1e37;
   font-size: 36px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 36px;
 }
 
 .feature-description {
@@ -619,5 +628,143 @@ header {
 
   .stat-divider {
     display: none;
+  }
+}
+
+/* Contact Section ---------------- */
+
+.contect-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  background-color: #FFFFFF;
+  
+}
+
+/* Contact section styles */
+.contect-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+ 
+}
+
+.contect-header {
+  text-align: start;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #eef2ff;
+  color: #5046e5;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.contect-title {
+  font-size: 36px;
+  font-weight: 800;
+  color: #1e293b;
+  margin-bottom: 24px;
+  line-height: 1.2;
+
+}
+
+.contect-description {
+  font-size: 20px;
+  font-weight: 400;
+  max-width: 680px;
+  color: #64748b;
+  margin-bottom: 40px;
+  line-height: 1.7;
+}
+
+.contect-list {
+  flex: 1;
+  max-width: 592px;
+}
+.contect-active-item {
+  padding: 24px;
+  margin-bottom: 20px;
+  border-left: 4px solid #4F46E5;
+  
+}
+.contect-item {
+  padding: 24px;
+  margin-bottom: 20px;
+  border-left: 4px solid #E0E7FF;
+  
+}
+
+.contect-list-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 16px;
+}
+
+.contect-text {
+  font-size: 16px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.dashboard-image {
+  flex: 1;
+  max-width: 550px;
+  position: relative;
+}
+
+.dashboard-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .contect-section {
+      flex-direction: column;
+      gap: 40px;
+  }
+
+  .contect-content, .dashboard-image {
+      max-width: 100%;
+  }
+
+  .contect-title {
+      font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contect-container {
+      padding: 60px 20px;
+  }
+
+  .contect-title {
+      font-size: 26px;
+  }
+
+  .contect-description {
+      font-size: 16px;
+      margin-bottom: 30px;
+  }
+
+  .contect-item {
+      padding-left: 20px;
+      margin-bottom: 30px;
+  }
+
+  .contect-title {
+      font-size: 18px;
+  }
+
+  .contect-text {
+      font-size: 15px;
   }
 }
