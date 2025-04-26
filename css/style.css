@@ -7,16 +7,17 @@
 }
 
 body {
-  background: linear-gradient(180deg, #f0f0ff 0%, #e6e6fa 100%);
+  /* background: linear-gradient(180deg, #f0f0ff 0%, #e6e6fa 100%); */
   min-height: 100vh;
 }
 
 .hero-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 112px 96px 112px;
+border: #CBD5E1 solid 1px;
 
-  background: linear-gradient(to bottom, #f0f0ff 50%, #5252eb 100%);
+  background: linear-gradient(to bottom, #FFFFFF 60%, #4F46E5 100%);
 }
 
 /* Header styles */
@@ -30,26 +31,6 @@ header {
 .logo {
   display: flex;
   align-items: center;
-}
-
-.logo-icon {
-  width: 32px;
-  height: 32px;
-  background-color: #6c5ce7;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  margin-right: 8px;
-}
-
-.logo-text {
-  font-weight: bold;
-  font-size: 20px;
-  color: #333;
 }
 
 .nav-links {
@@ -86,7 +67,7 @@ header {
 }
 
 .btn-primary {
-  background-color: #584cf4;
+  background-color: #4F46E5;
   color: white;
 }
 
@@ -95,12 +76,14 @@ header {
   text-align: center;
   padding: 40px 0;
   margin-bottom: 40px;
+  color: #1E293B;
+  
 }
 
 .badge {
   display: inline-block;
   background: rgba(88, 76, 244, 0.1);
-  color: #584cf4;
+  color: #4F46E5;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 14px;
@@ -109,17 +92,20 @@ header {
 }
 
 .hero h1 {
-  font-size: 48px;
-  font-weight: 700;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 60px;
+  font-weight: 800;
   color: #1a1a2e;
   margin-bottom: 20px;
   line-height: 1.2;
 }
 
 .hero p {
-  font-size: 16px;
-  color: #666;
-  max-width: 600px;
+  font-size: 18px;
+  color: #475569;
+  max-width: 800px;
+  font-size: 18px;
   margin: 0 auto;
   margin-bottom: 30px;
   line-height: 1.6;
@@ -275,7 +261,7 @@ header {
 .social-proof {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 64px 112px;
   background-color: #F8FAFC;
 }
 
@@ -359,8 +345,8 @@ header {
 .features-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
-  background: white;
+  padding: 96px 112px;
+  background: #FFFFFF;
 }
 
 /* Feature section styles -------------*/
@@ -493,7 +479,7 @@ header {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 96px 112px;
   background-color: #F8FAFC;
 }
 
@@ -636,7 +622,7 @@ header {
 .contect-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 80px 20px;
+  padding: 96px 112px;
   background-color: #FFFFFF;
   
 }
@@ -774,7 +760,7 @@ header {
 .testimonials-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 96px 48px;
             background-color: #F8FAFC;
         }
 
@@ -819,7 +805,7 @@ header {
         }
 
         .testimonial-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-15px);
 
             
         }
@@ -1043,6 +1029,7 @@ header {
         max-width: 1200px;
         margin: 0 auto;
         padding: 96px 320px;
+        gap: 10px; ;
         background-color: #F8FAFC;
     }
 
@@ -1304,7 +1291,7 @@ header {
   max-width: 1200px;
   margin: 0 auto;
   padding: 96px 112px;
-  background-color: #f9fafb;
+  background-color: #F8FAFC;
 }
 
 .footer-container {
