@@ -121,7 +121,9 @@ header {
   position: relative;
   margin: 0 auto;
   max-width: 900px;
-  padding-bottom: 60px;
+  border-radius: 24px;
+  border: #CBD5E1 solid 8px;
+  
 }
 
 .dashboard-preview {
@@ -138,10 +140,15 @@ header {
   right: 40px;
   bottom: 0;
   width: 240px;
+  min-height: 467.85px;
   background: white;
   border-radius: 16px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  border: #CBD5E1 solid 8px;
+  z-index: 1;
+  top: 150px;
+  right: -90px;
 }
 
 .dashboard-header {
@@ -498,6 +505,7 @@ header {
   justify-content: center;
   margin: 0 auto 32px;
 }
+
 
 .stats-home-icon {
   color: #5046e5;
@@ -1176,9 +1184,11 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 64px 112px;
   flex-wrap: wrap;
+  padding: 80px 5%;
   background-color: #EEF2FF;
+  overflow: hidden; /* Important to hide the image overflow! */
+  position: relative;
 }
 
 /* Text Content */
@@ -1242,47 +1252,64 @@ header {
 
 /* Images */
 .download-images {
+  flex: 1 1 50%;
   position: relative;
-  flex: 1 1 400px;
+  height: 721px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 40px;
+  justify-content: center;
 }
 
-.image-1 {
-  width: 250px;
-  height: auto;
-  z-index: 2;
-  overflow: hidden;
-}
-
-.image-2 {
-  width: 250px;
-  height: auto;
+.phone {
   position: absolute;
-  right: -50px;
-  top: 50px;
+}
+
+.phone-1 {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.phone-2 {
+  right: -100px; /* This pushes the second phone partly outside */
+  top: 20%;
   z-index: 1;
 }
+
+/* Images */
+.phone img {
+  /* width: 250px; */
+  height: 721px;
+  height: auto;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
   .download-section {
     flex-direction: column;
     text-align: center;
+    overflow: visible;
   }
 
   .download-images {
-    margin-top: 20px;
     position: static;
+    height: auto;
+    margin-top: 40px;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 
-  .image-1,
-  .image-2 {
+  .phone {
     position: static;
-    margin: 10px auto;
+    transform: none;
+  }
+
+  .phone img {
+    width: 220px;
   }
 }
 
@@ -1430,14 +1457,34 @@ header {
       display: block;
   }
   .footer-bottom {
+    max-width: 343px;
+    margin: 0 auto;
+    display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 32px 0;
   gap: 32px;
   }
+  .footer-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+
+  }
+.footer-logo img {
+  margin: 0 auto;
+  padding-left: 25%;
+}
   .copyright-copy{
     display: none;
+  }
+  .copyright{
+    display: block;
+    text-align: center;
   }
   
 }
